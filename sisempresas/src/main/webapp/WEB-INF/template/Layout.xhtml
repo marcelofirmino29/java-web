@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<meta charset="UTF-8"/>
+	<title>Gestão de Empresas</title>
+	<h:outputStylesheet library="algaworks" name="estilo.css" />
+
+	<style>
+		body {
+			background-color: #36454F; /* cinza-chumbo */
+		}
+
+		header {
+			padding: 5px;
+			margin-bottom: 20px;
+			height: 30px;
+			background-color: #00bfff; /* azul claro */
+			color: #000;
+			box-shadow: 0px 2px 2px #ccc;
+		}
+
+		#conteudo {
+			text-align: left;
+			padding: 5px;
+		}
+
+		h2 {
+			text-align: center;
+			color: #00bfff; /* azul claro */
+		}
+
+		footer {
+			border-top: 1px solid #fff;
+			padding: 5px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			background-color: #00bfff; /* azul claro */
+			color: #fff;
+			text-align: center; /* Alinhar ao centro */
+		}
+	</style>
+</h:head>
+
+<h:body>
+	<header>
+		<h:graphicImage library="algaworks" name="logo.png"/>
+	</header>
+	
+	<h2>
+		<ui:insert name="titulo" />
+	</h2>
+
+	<p:panel>
+		<div id="conteudo">		
+			<ui:insert name="conteudo" />	
+		</div>
+	</p:panel>
+	
+	<footer>
+		Projeto Gestão de Empresas
+	</footer>
+	
+	<h:form>
+		<p:confirmDialog global="true">
+			<p:commandButton value="Não" icon="fa fa-remove"
+				styleClass="ui-confirmdialog-no" />
+			<p:commandButton value="Sim" icon="fa fa-check"
+				styleClass="ui-confirmdialog-yes" />
+		</p:confirmDialog>
+	</h:form>
+</h:body>
+
+</html>
